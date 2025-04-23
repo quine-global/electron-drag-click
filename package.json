@@ -1,6 +1,6 @@
 {
-  "name": "electron-drag-click",
-  "version": "1.0.6",
+  "name": "quine-electron-drag-click",
+  "version": "1.0.6c",
   "description": "A native module that propagates click events to draggable areas in Electron on macOS.",
   "main": "index.js",
   "scripts": {
@@ -9,11 +9,12 @@
     "clean": "node-gyp clean",
     "rebuild": "node-gyp rebuild",
     "rebuild:dev": "node-gyp rebuild --debug",
-    "start": "electron ./test"
+    "start": "electron ./test",
+    "postinstall": "node-gyp clean && node-gyp configure && node-gyp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gerhardberger/electron-drag-click.git"
+    "url": "git+https://github.com/quine-global/electron-drag-click.git"
   },
   "keywords": [
     "macos",
@@ -22,14 +23,17 @@
     "native",
     "draggable"
   ],
-  "author": "Gellert Hegyi <gellihegyi@gmail.com>",
+  "authors": [
+    "Gellert Hegyi <gellihegyi@gmail.com>",
+    "Quine Global <quine@fastmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gerhardberger/electron-drag-click/issues"
+    "url": "https://github.com/quine-global/electron-drag-click/issues"
   },
-  "homepage": "https://github.com/gerhardberger/electron-drag-click#readme",
+  "homepage": "https://github.com/quine-global/electron-drag-click#readme",
   "devDependencies": {
-    "electron": "^33.0.2",
+    "electron": "34.5.1",
     "node-gyp": "^9.0.0"
   },
   "dependencies": {
